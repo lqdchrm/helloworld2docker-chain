@@ -75,9 +75,9 @@ dotnet new mstest --name AddTwoNumbersTests -o ./src-test
 - added build scripts (cmdline)
   - to be called from project root
 
-[ ] Separate Business-Tasks on executable level
+[X] Separate Business-Tasks on executable level
 
-[ ] Use executables from batch file on same machine
+[ ] Use executables via batch file on same machine
 
 #### Milestone 2
 

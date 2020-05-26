@@ -1,1 +1,3 @@
-dotnet clean ./src/AddTwoNumbers.sln
+@ECHO OFF
+CALL ./scripts/env.bat
+CALL ./scripts/release/clean.bat

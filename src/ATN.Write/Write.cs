@@ -1,6 +1,6 @@
 using System;
 
-namespace AddTwoNumbers
+namespace ATN.Write
 {
     public static class Write
     {

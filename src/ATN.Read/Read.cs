@@ -1,6 +1,6 @@
 using System;
 
-namespace AddTwoNumbers
+namespace ATN.Read
 {
     public static class Read
     {

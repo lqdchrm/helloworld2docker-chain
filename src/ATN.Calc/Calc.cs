@@ -1,6 +1,6 @@
 using System;
 
-namespace AddTwoNumbers
+namespace ATN.Calc
 {
     public static class Calc
     {

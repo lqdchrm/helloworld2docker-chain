@@ -11,23 +11,48 @@ namespace HelloWorld
         /// <returns>0 = ok, else = error</returns>
         static int Main(string[] args)
         {
-            Console.Write("Input number a: ");
-            var strA = Console.ReadLine();
-
-            Console.Write("Input number b: ");
-            var strB = Console.ReadLine();
-
             int a, b;
-            if (!int.TryParse(strA, out a) || !int.TryParse(strB, out b))
+
+            // Read
+            try
+            {
+                ReadNumberFromConsole("Input number a:", out a);
+                ReadNumberFromConsole("Input number b:", out b);
+            } catch (Exception)
             {
                 Console.Error.WriteLine("Malformed input");
                 return -1;
             }
 
-            int result = a + b;
+            // Calc
+            int result = AddNumbers(a, b);
 
-            Console.WriteLine($"a + b = {result}");
+            // Write
+            try
+            {
+                WriteResultToConsole("a + b = {0}", result);
+            } catch(Exception)
+            {
+                Console.Error.WriteLine("Something went wrong internally. Probably a developer messed up string formatting.");
+                return -1;
+            }
+
             return 0;
+        }
+
+        private static void ReadNumberFromConsole(string prompt, out int x)
+        {
+            prompt = prompt ?? ":";
+            Console.Write($"{prompt} ");
+            var str = Console.ReadLine();
+            x = int.Parse(str);
+        }
+
+        private static int AddNumbers(int a, int b) => a + b;
+
+        private static void WriteResultToConsole(string formatString, int result)
+        {
+            Console.WriteLine(string.Format(formatString, result));
         }
     }
 }

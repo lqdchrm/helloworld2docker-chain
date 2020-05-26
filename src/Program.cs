@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace HelloWorld
+namespace AddTwoNumbers
 {
-    class Program
+    public class Program
     {
         /// <summary>
         /// Using shell conventions for return typ: 0 = ok, else = error
@@ -40,7 +40,7 @@ namespace HelloWorld
             return 0;
         }
 
-        private static void ReadNumberFromConsole(string prompt, out int x)
+        public static void ReadNumberFromConsole(string prompt, out int x)
         {
             prompt = prompt ?? ":";
             Console.Write($"{prompt} ");
@@ -48,9 +48,9 @@ namespace HelloWorld
             x = int.Parse(str);
         }
 
-        private static int AddNumbers(int a, int b) => a + b;
+        public static int AddNumbers(int a, int b) => a + b;
 
-        private static void WriteResultToConsole(string formatString, int result)
+        public static void WriteResultToConsole(string formatString, int result)
         {
             Console.WriteLine(string.Format(formatString, result));
         }

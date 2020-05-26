@@ -59,7 +59,10 @@ dotnet new mstest --name AddTwoNumbersTests -o ./src-test
 
 #### Functional Refactoring
 
-[ ] Separate Business-Tasks on function level
+[X] Separate Business-Tasks on function level
+
+- separated execution in Main from functionality => separate classes
+- changed high-level interfaces to string[], as this will be what is used when piping on console
 
 [ ] Separate Business-Tasks on project level
 

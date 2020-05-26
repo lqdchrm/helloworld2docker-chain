@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace AddTwoNumbers
 {
@@ -11,52 +12,44 @@ namespace AddTwoNumbers
         /// <returns>0 = ok, else = error</returns>
         static int Main(string[] args)
         {
-            // Read
-            string strA, strB;
-            ReadNumberFromConsoleAsString("Input number a:", out strA);
-            ReadNumberFromConsoleAsString("Input number b:", out strB);
-
-            // Calc
-            int a, b;
             try
             {
-                a = ConvertNumberFromString(strA);
-                b = ConvertNumberFromString(strB);
-            } catch (Exception)
-            {
-                Console.Error.WriteLine("Malformed input");
-                return -1;
-            }
+                string[] numbersAsStringArray = ReadNumbers();
 
-            int result = AddNumbers(a, b);
+                string[] resultAsStringArray = CalcSum(numbersAsStringArray);
 
-            // Write
-            try
-            {
-                WriteResultToConsole("a + b = {0}", result);
-            } catch(Exception)
-            {
-                Console.Error.WriteLine("Something went wrong internally. Probably a developer messed up string formatting.");
+                WriteSum(resultAsStringArray);
+
+            } catch(Exception exc) {
+                Console.Error.Write("Something went wrong: ");
+                Console.Error.WriteLine(exc.Message);
                 return -1;
             }
 
             return 0;
         }
 
-        public static void ReadNumberFromConsoleAsString(string prompt, out string x)
+        private static string[] ReadNumbers()
         {
-            prompt = prompt ?? ":";
-            Console.Write($"{prompt} ");
-            x = Console.ReadLine();
+            string[] result = new string[2];
+            Read.ReadNumberFromConsoleAsString("Input number a:", out result[0]);
+            Read.ReadNumberFromConsoleAsString("Input number b:", out result[1]);
+            return result;
         }
 
-        public static int ConvertNumberFromString(string str) => int.Parse(str);
-
-        public static int AddNumbers(int a, int b) => a + b;
-
-        public static void WriteResultToConsole(string formatString, int result)
+        private static string[] CalcSum(params string[] args)
         {
-            Console.WriteLine(string.Format(formatString, result));
+            // functional conversion aka "map" => is independent of array sizes
+            var converted = args.Select(Calc.ConvertNumberFromString).ToArray();
+
+            var sum = Calc.AddNumbers(converted[0], converted[1]);
+
+            return new string[] { sum.ToString() };
+        }
+
+        private static void WriteSum(params string[] args)
+        {
+            Write.WriteResultToConsole("{0}", args[0]);
         }
     }
 }

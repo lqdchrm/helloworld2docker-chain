@@ -45,7 +45,11 @@ dotnet new console -n HelloWorld -o ./src
 
 [X] Implement Business Use-Case
 
-[ ] Add Testing
+[X] Add Testing
+
+```bash
+dotnet new mstest --name AddTwoNumbersTests -o ./src-test
+```
 
 #### Milestone 1
 

@@ -43,7 +43,9 @@ C#, dotnet core , docker, shell scripts, nuget
 dotnet new console -n HelloWorld -o ./src
 ```
 
-[ ] Implement Business Use-Case
+[X] Implement Business Use-Case
+
+[ ] Add Testing
 
 #### Milestone 1
 

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ATN.Calc\ATN.Calc.csproj" />
+    <ProjectReference Include="..\ATN.Read\ATN.Read.csproj" />
+    <ProjectReference Include="..\ATN.Write\ATN.Write.csproj" />
+  </ItemGroup>
+
+</Project>

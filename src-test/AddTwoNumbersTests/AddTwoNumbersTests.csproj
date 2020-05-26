@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\AddTwoNumbers.csproj" />
+    <ProjectReference Include="..\..\src\ATN.Calc\ATN.Calc.csproj" />
   </ItemGroup>
 
 </Project>

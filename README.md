@@ -64,7 +64,16 @@ dotnet new mstest --name AddTwoNumbersTests -o ./src-test
 - separated execution in Main from functionality => separate classes
 - changed high-level interfaces to string[], as this will be what is used when piping on console
 
-[ ] Separate Business-Tasks on project level
+[X] Separate Business-Tasks on project level
+
+- moved bl to class-libs
+
+```bash
+  dotnet new classlib -n <LibName> -o ./src/<LibName>
+```
+
+- added build scripts (cmdline)
+  - to be called from project root
 
 [ ] Separate Business-Tasks on executable level
 

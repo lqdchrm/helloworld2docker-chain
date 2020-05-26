@@ -1,6 +1,6 @@
 @ECHO OFF
-REM this script expects ready to use projects in dist folder
-SET READ="./dist/win10-x64/ATN.READ/ATN.READ.exe"
-SET CALC="./dist/win10-x64/ATN.CALC/ATN.CALC.exe"
-SET WRITE="./dist/win10-x64/ATN.WRITE/ATN.WRITE.exe"
+REM this script expects docker containers on your system, build with scripts/dockerize.bat
+SET READ=docker run -i --rm atn-read
+SET CALC=docker run -i --rm atn-calc
+SET WRITE=docker run -i --rm atn-write
 %READ% | %CALC% | %WRITE%

@@ -87,9 +87,17 @@ dotnet new mstest --name AddTwoNumbersTests -o ./src-test
 
 #### Operational Refactoring
 
-[ ] Separate Business-Tasks on container level
+[X] Separate Business-Tasks on container level
 
-[ ] Use containers from batch file (without orch.)
+```bash
+./scripts/dockerize.bat
+```
+
+[X] Use containers from batch file (without orch.)
+
+```bash
+./usecase.bat
+```
 
 [ ] Impl container orchestration
 

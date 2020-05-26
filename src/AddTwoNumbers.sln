@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATN.Write", "ATN.Write\ATN.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTwoNumbers", "AddTwoNumbers\AddTwoNumbers.csproj", "{63BC34FC-EF32-42D1-AE45-749AF648F525}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTwoNumbersTests", "..\src-test\AddTwoNumbersTests.csproj", "{A699969E-1F05-477B-AC38-36F23948DE23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddTwoNumbersTests", "..\src-test\AddTwoNumbersTests\AddTwoNumbersTests.csproj", "{A699969E-1F05-477B-AC38-36F23948DE23}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DBCDB099-6AF9-40E5-B7BF-63B5B31F9564}"
 EndProject

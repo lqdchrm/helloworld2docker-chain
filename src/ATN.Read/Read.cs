@@ -7,7 +7,7 @@ namespace ATN.Read
         public static void ReadNumberFromConsoleAsString(string prompt, out string x)
         {
             prompt = prompt ?? ":";
-            Console.Write($"{prompt} ");
+            Console.Error.Write($"{prompt} ");
             x = Console.ReadLine();
         }
     }

@@ -11,7 +11,7 @@ namespace AddTwoNumbersTests
         {
             var fixture = new { a = 5, b = 4, expected = 9 };
 
-            var actual = Program.AddNumbers(fixture.a, fixture.b);
+            var actual = Calc.AddNumbers(fixture.a, fixture.b);
             Assert.AreEqual(fixture.expected, actual);
         }
     }

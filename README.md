@@ -53,7 +53,7 @@ dotnet new mstest --name AddTwoNumbersTests -o ./src-test
 
 #### Milestone 1
 
-[ ] working Business Use-Case
+[X] working Business Use-Case
 
 ### Phase 2: [DEV] Business-Case Modularization
 

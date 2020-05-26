@@ -13,6 +13,9 @@ namespace ATN.Write
         /// <param name="args"></param>
         public static void Main(params string[] args)
         {
+            if (args.Length == 0)
+                args = new string[] { Console.ReadLine() };
+
             Write.WriteResultToConsole("{0}", args[0]);
         }
     }

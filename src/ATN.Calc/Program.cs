@@ -13,6 +13,9 @@ namespace ATN.Calc
         /// <param name="args"></param>
         public static void Main(params string[] args)
         {
+            if (args.Length == 0)
+                args = Console.ReadLine().Split(" ").ToArray();
+
             // functional conversion aka "map" => is independent of array sizes
             var converted = args.Select(Calc.ConvertNumberFromString).ToArray();
 

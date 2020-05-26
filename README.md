@@ -81,7 +81,7 @@ dotnet new mstest --name AddTwoNumbersTests -o ./src-test
 
 #### Milestone 2
 
-[ ] Working Business Use-Case spanning multiple-executables
+[X] Working Business Use-Case spanning multiple-executables
 
 ### Phase 3: [DEV] Technical Modularization aka Containerization
 

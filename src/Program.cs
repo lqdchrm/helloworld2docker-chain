@@ -11,20 +11,23 @@ namespace AddTwoNumbers
         /// <returns>0 = ok, else = error</returns>
         static int Main(string[] args)
         {
-            int a, b;
-
             // Read
+            string strA, strB;
+            ReadNumberFromConsoleAsString("Input number a:", out strA);
+            ReadNumberFromConsoleAsString("Input number b:", out strB);
+
+            // Calc
+            int a, b;
             try
             {
-                ReadNumberFromConsole("Input number a:", out a);
-                ReadNumberFromConsole("Input number b:", out b);
+                a = ConvertNumberFromString(strA);
+                b = ConvertNumberFromString(strB);
             } catch (Exception)
             {
                 Console.Error.WriteLine("Malformed input");
                 return -1;
             }
 
-            // Calc
             int result = AddNumbers(a, b);
 
             // Write
@@ -40,13 +43,14 @@ namespace AddTwoNumbers
             return 0;
         }
 
-        public static void ReadNumberFromConsole(string prompt, out int x)
+        public static void ReadNumberFromConsoleAsString(string prompt, out string x)
         {
             prompt = prompt ?? ":";
             Console.Write($"{prompt} ");
-            var str = Console.ReadLine();
-            x = int.Parse(str);
+            x = Console.ReadLine();
         }
+
+        public static int ConvertNumberFromString(string str) => int.Parse(str);
 
         public static int AddNumbers(int a, int b) => a + b;
 

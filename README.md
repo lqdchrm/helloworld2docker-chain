@@ -77,7 +77,7 @@ dotnet new mstest --name AddTwoNumbersTests -o ./src-test
 
 [X] Separate Business-Tasks on executable level
 
-[ ] Use executables via batch file on same machine
+[X] Use executables via batch file on same machine
 
 #### Milestone 2
 

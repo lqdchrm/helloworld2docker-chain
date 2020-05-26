@@ -1,0 +1,1 @@
+dotnet run --project ./src/AddTwoNumbers/AddTwoNumbers.csproj

@@ -37,7 +37,11 @@ C#, dotnet core , docker, shell scripts, nuget
 
 #### Bootstrapping
 
-[ ] Create standalone Console app
+[X] Create standalone Console app
+
+```bash
+dotnet new console -n HelloWorld -o ./src
+```
 
 [ ] Implement Business Use-Case
 

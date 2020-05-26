@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ATN.Calc": {
+      "commandName": "Project",
+      "commandLineArgs": "4 5"
+    }
+  }
+}

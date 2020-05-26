@@ -1,0 +1,6 @@
+<!-- needed if folder contains multiple project files -->
+<Project>
+  <PropertyGroup>
+    <MSBuildProjectExtensionsPath>obj\nuget\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
+  </PropertyGroup>
+</Project>

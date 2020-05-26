@@ -1,4 +1,4 @@
-using AddTwoNumbers;
+using ATN.Calc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AddTwoNumbersTests
